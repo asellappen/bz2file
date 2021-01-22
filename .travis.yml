@@ -23,7 +23,7 @@ sudo: required
 install:
   - pip install pytest
   - python setup.py install
-  - pip install --no-deps -e .
+ # - pip install --no-deps -e .
 script:
   - python -m pytest test_bz2file.py
   
