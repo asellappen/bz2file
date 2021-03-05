@@ -25,5 +25,5 @@ install:
  # - python setup.py install
   - pip install --no-deps -e .
 script:
-  - python -m pytest -v test_bz2file.py
+  - python -m pytest -v test_bz2file.py -- --ignore=BZ2FileTest.testWithoutThreading
   
