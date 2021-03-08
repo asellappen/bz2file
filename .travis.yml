@@ -10,17 +10,44 @@
 #
 # ----------------------------------------------------------------------------
 language: python
-dist: focal
+
 arch:
   - amd64
   - ppc64le
 
-python:
-  - 2.6
-  - 2.7
-  - 3.0
-  - 3.4
-  - PyPy 2.0
+matrix:
+  include:
+    - python: 2.6
+      dist: trust
+    - python: 2.7
+      dist: xenial
+    - python: 3.0
+      dist: xenial
+    - python: 3.4
+      dist: xenial
+    - python: PyPy 2.0
+      dist: xenial
+    - python: 2.6
+      dist: trust
+      arch: ppc64le
+    - python: 2.7
+      arch: ppc64le
+      dist: xenial
+    - python: 3.0
+      arch: ppc64le
+      dist: xenial
+    - python: 3.4
+      arch: ppc64le
+      dist: xenial
+    - python: PyPy 2.0
+      arch: ppc64le
+      dist: xenial
+    - python:  3.6
+      arch: ppc64le
+      dist: bionic
+    - python:  3.7
+      arch: ppc64le
+      dist: bionic
 
 sudo: required
 install:
