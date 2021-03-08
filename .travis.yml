@@ -16,21 +16,16 @@ matrix:
   include:
     - python: 2.6
       dist: trust
-      env : $python=py2.6
     - python: 2.7
       dist: xenial
-      env : $python=py2.7
     - python: 3.4
       dist: xenial
-      env : $python=py3.4
     - python: 3.5
       dist: xenial
-      env : "py3.5"
     - python: pypy2
       dist: bionic
-    - python: python-nightly
+    - python: nightly
       dist: xenial
-      env : "python-nightly"
     - python:  3.6
       dist: bionic
     - python: 2.7
@@ -45,7 +40,7 @@ matrix:
     - python: 3.6
       arch: ppc64le
       dist: bionic
-    - python:  python-nightly
+    - python: nightly
       arch: ppc64le
       dist: xenial
 
