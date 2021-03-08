@@ -19,40 +19,44 @@ matrix:
   include:
     - python: 2.6
       dist: trust
+      env : py2.6
     - python: 2.7
-      dist: xenial
-    - python: 3.0
       dist: xenial
     - python: 3.4
       dist: xenial
-    - python: PyPy 2.0
+    - python: 3.5
       dist: xenial
-    - python: 2.6
-      dist: trust
-      arch: ppc64le
-    - python: 2.7
-      arch: ppc64le
-      dist: xenial
-    - python: 3.0
-      arch: ppc64le
-      dist: xenial
-    - python: 3.4
-      arch: ppc64le
-      dist: xenial
-    - python: PyPy 2.0
-      arch: ppc64le
-      dist: xenial
+    - python: pypy2
+      dist: bionic
+    - python: python-nightly
+      dist: bionic
     - python:  3.6
+      dist: bionic
+    - python: 2.7
       arch: ppc64le
+      dist: xenial
+    - python: 3.4
+      arch: ppc64le
+      dist: xenial
+    - python: 3.5
+      arch: ppc64le
+      dist: xenial
+    - python: 3.6
+      arch: ppc64le
+      dist: bionic
+    - python:  python-nightly
+      arch: ppc64le
+      dist: bionic
+    - python:  3.7
       dist: bionic
     - python:  3.7
       arch: ppc64le
       dist: bionic
-
+      
+      
 sudo: required
+
 install:
-  - pip install pytest
- # - python setup.py install
   - pip install --no-deps -e .
 script:
   - python test_bz2file.py 
