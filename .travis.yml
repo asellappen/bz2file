@@ -11,7 +11,6 @@
 # ----------------------------------------------------------------------------
 language: python
 
-
 matrix:
   include:
     - python: 2.6
@@ -24,8 +23,6 @@ matrix:
       dist: xenial
     - python: pypy2
       dist: bionic
-    - python: nightly
-      dist: xenial
     - python:  3.6
       dist: bionic
     - python: 2.7
@@ -40,10 +37,6 @@ matrix:
     - python: 3.6
       arch: ppc64le
       dist: bionic
-    - python: nightly
-      arch: ppc64le
-      dist: xenial
-
       
 sudo: required
 
